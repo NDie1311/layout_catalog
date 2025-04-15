@@ -26,10 +26,6 @@
     font-weight: 500;
     line-height: 18px;
     color: #060b35;
-
-    .card:hover & {
-      color: #34568b;
-    }
   }
 
   &__product {
@@ -100,18 +96,12 @@
     }
   }
 
-  [data-qa='card-hover'] {
-    color: #00acdc;
-    background-color: #fff;
-
-    &:hover {
-      color: #00acdc;
-      background-color: #f3f3f3;
-    }
+  &:hover &_title {
+    color: #34568b;
   }
 }
 
-.card:first-child .card__button-buy {
+.card[data-qa='card'] .card__button-buy[data-qa='card-hover'] {
   background-color: #00acdc;
   color: #fff;
 
